@@ -1,0 +1,30 @@
+# Visual Studio files
+.vs/
+bin/
+obj/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/packages/
+
+# User-specific files
+*.user
+*.suo
+*.bak
+*.cache
+
+# Build output
+build/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Logs and diagnostics
+logs/
+*.log
