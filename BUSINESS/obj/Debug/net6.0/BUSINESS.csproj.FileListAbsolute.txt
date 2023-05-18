@@ -1,0 +1,17 @@
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\BUSINESS.deps.json
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\BUSINESS.dll
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\BUSINESS.pdb
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\INFRASTRUCTURE.dll
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\MODELS.dll
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\INFRASTRUCTURE.pdb
+E:\Other Projects\BizSolAssessment\BUSINESS\bin\Debug\net6.0\MODELS.pdb
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.csproj.AssemblyReference.cache
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.AssemblyInfoInputs.cache
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.AssemblyInfo.cs
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.csproj.CoreCompileInputs.cache
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.csproj.CopyComplete
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.dll
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\refint\BUSINESS.dll
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\BUSINESS.pdb
+E:\Other Projects\BizSolAssessment\BUSINESS\obj\Debug\net6.0\ref\BUSINESS.dll

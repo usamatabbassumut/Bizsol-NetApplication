@@ -1,0 +1,12 @@
+E:\Other Projects\BizSolAssessment\MODELS\bin\Debug\net6.0\MODELS.deps.json
+E:\Other Projects\BizSolAssessment\MODELS\bin\Debug\net6.0\MODELS.dll
+E:\Other Projects\BizSolAssessment\MODELS\bin\Debug\net6.0\MODELS.pdb
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.csproj.AssemblyReference.cache
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.GeneratedMSBuildEditorConfig.editorconfig
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.AssemblyInfoInputs.cache
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.AssemblyInfo.cs
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.csproj.CoreCompileInputs.cache
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.dll
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\refint\MODELS.dll
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\MODELS.pdb
+E:\Other Projects\BizSolAssessment\MODELS\obj\Debug\net6.0\ref\MODELS.dll
