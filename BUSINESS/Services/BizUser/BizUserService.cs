@@ -1,5 +1,7 @@
 ﻿using INFRASTRUCTURE.Entities;
 using INFRASTRUCTURE.Repositories.BizUser;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using MODELS.BizUser;
 using System;
 using System.Collections.Generic;
@@ -12,10 +14,12 @@ namespace BUSINESS.Services.BizUser
     public class BizUserService : IBizUserService
     {
         private readonly IBizUserRepository _bizUserRepository;
+        private readonly IConfiguration _configuration;
 
-        public BizUserService(IBizUserRepository bizUserRepository)
+        public BizUserService(IBizUserRepository bizUserRepository, IConfiguration configuration)
         {
             _bizUserRepository = bizUserRepository;
+            _configuration = configuration;
         }
 
         public IEnumerable<BizUserViewModel> GetAllUsers()
@@ -64,6 +68,52 @@ namespace BUSINESS.Services.BizUser
             user.IsDeleted = true;
             await _bizUserRepository.Change(user);
 
+        }
+
+        public bool UploadDocument(string mapPath, IFormFile file)
+        {
+            bool status = false;
+            try
+            {
+                if (file != null && file.Length > 0)
+                {
+                    //Delete Previous File for edit document in AttachDocument form
+                    string fileName = file.FileName;
+                    string path = Path.Combine(mapPath, _configuration["BizSolUploads:User"] + fileName);
+                    FileInfo file2 = new FileInfo(path);
+                    if (file2.Exists)//check file exsit or not
+                    {
+                        try
+                        {
+                            file2.Delete();
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception(ex.Message);
+                        }
+                    }
+
+                    try
+                    {
+
+                        //Set the Image File Path.
+                        string filePath = Path.Combine(mapPath, _configuration["BizSolUploads:User"] + fileName);
+                        //Save the Image File in Folder.
+                        file.CopyTo(new FileStream(filePath, FileMode.Create));
+                        status = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return status;
         }
     }
 }

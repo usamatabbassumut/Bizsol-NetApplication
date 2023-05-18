@@ -13,7 +13,6 @@ namespace BizsolAssessment.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IBizUserService _bizUserService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-
         public HomeController(ILogger<HomeController> logger, IBizUserService bizUserService, IWebHostEnvironment webHostEnvironment)
         {
             _logger = logger;
@@ -37,6 +36,7 @@ namespace BizsolAssessment.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        #region [--- API METHODS ---]
         [HttpPost]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -64,7 +64,7 @@ namespace BizsolAssessment.Controllers
             {
                 IFormFile document = Request.Form.Files[0] as IFormFile;
                 string mapPath = _webHostEnvironment.WebRootPath;
-                status = UploadDocument(mapPath, document);
+                status = _bizUserService.UploadDocument(mapPath, document);
             }
             catch
             {
@@ -77,51 +77,7 @@ namespace BizsolAssessment.Controllers
             });
         }
 
-        public bool UploadDocument(string mapPath, IFormFile file)
-        {
-            bool status = false;
-            try
-            {
-                if (file != null && file.Length > 0)
-                {
-                    //Delete Previous File for edit document in AttachDocument form
-                    string fileName = file.FileName;
-                    string path = Path.Combine(mapPath, "CustomUploads\\user\\" + fileName);
-                    FileInfo file2 = new FileInfo(path);
-                    if (file2.Exists)//check file exsit or not
-                    {
-                        try
-                        {
-                            file2.Delete();
-                        }
-                        catch (Exception ex)
-                        {
-                            throw new Exception(ex.Message);
-                        }
-                    }
-
-                    try
-                    {
-
-                        //Set the Image File Path.
-                        string filePath = Path.Combine(mapPath, "CustomUploads\\user\\" + fileName);
-                        //Save the Image File in Folder.
-                        file.CopyTo(new FileStream(filePath, FileMode.Create));
-                        status = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        throw new Exception(ex.Message);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-            return status;
-        }
-
+       
+        #endregion
     }
 }

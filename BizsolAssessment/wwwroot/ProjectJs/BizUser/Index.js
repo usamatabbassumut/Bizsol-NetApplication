@@ -190,6 +190,7 @@ var BizUser = {
             //async: false,
             data: fileData,
             success: function (result) {
+                BizUser.dataGrid.ajax.reload(null, false);
                 toastr.success('File uploaded successfully!');
             },
             error: function (err) {

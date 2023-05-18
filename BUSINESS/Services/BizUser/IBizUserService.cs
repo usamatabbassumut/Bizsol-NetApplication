@@ -1,4 +1,5 @@
-﻿using MODELS.BizUser;
+﻿using Microsoft.AspNetCore.Http;
+using MODELS.BizUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace BUSINESS.Services.BizUser
         BizUserViewModel GetUserById(long id);
         Task InsertUpdateUser(BizUserViewModel model);
         Task DeleteUser(long id);
+        bool UploadDocument(string mapPath, IFormFile file);
     }
 }
